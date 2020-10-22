@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -38,6 +40,7 @@ body {
 
 #buttonbar {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     position:absolute;
     bottom: 20px;
@@ -81,9 +84,3 @@ body {
 .order:hover {
     box-shadow: 5px 5px #40BAA4;
 }
-
-@media only screen and (max-width: 767px) { 
-    html {
-        color: #F00;
-    }
- }
