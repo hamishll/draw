@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
     const ctx = canvas.getContext("2d");
 
     //Resizing
-    canvas.height = window.innerHeight;
+    canvas.height = window.innerHeight-20;
     canvas.width = window.innerWidth;
 
     // Example: rectangle
@@ -115,7 +115,7 @@ window.addEventListener("load", () => {
 
 
 
-
+document.body.addEventListener('touchstart', function(e){ e.preventDefault(); });
 
 window.addEventListener('resize', () => {
     //canvas.height = window.innerHeight;
