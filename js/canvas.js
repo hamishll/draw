@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
     const ctx = canvas.getContext("2d");
 
     //Resizing
-    canvas.height = window.innerHeight-40;
+    canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
 
     // Example: rectangle
@@ -19,7 +19,12 @@ window.addEventListener("load", () => {
     // ctx.moveTo(100,400);
     // ctx.lineTo(200,400);
     // ctx.lineTo(200,450);
-    // ctx.stroke();
+    // ctx.fill();
+
+    //let p = new Path2D('M10 10 h 80 v 80 h -80 Z');
+    //ctx.fill(p);
+    var img = document.getElementById("tshirt");
+    ctx.drawImage(img, 0,0,window.innerWidth,innerWidth);
 
     // Variables
     let painting = false;
@@ -46,6 +51,7 @@ window.addEventListener("load", () => {
         ctx.beginPath();
         ctx.moveTo(e.clientX, e.clientY);
     }
+
 
     // Event Listeners
     canvas.addEventListener("mousedown", startPosition);
@@ -112,10 +118,18 @@ window.addEventListener("load", () => {
 
 
 window.addEventListener('resize', () => {
-    //canvas.height = window.innerHeight-30;
-    //canvas.width = window.innerWidth-30;
+    //canvas.height = window.innerHeight;
+    //canvas.width = window.innerWidth;
 });
+
 function setColor (color) {
     chosenColor = color;
 }
-
+function clearCanvas() {
+    console.log("Canvas cleared");
+    const canvas = document.querySelector("#canvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = canvas.width;
+    var img = document.getElementById("tshirt");
+    ctx.drawImage(img, 0,0,window.innerWidth,innerWidth);    
+}

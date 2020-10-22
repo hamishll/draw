@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body {
+    font-family: sans-serif, Arial;
+}
 
 #container {
     position:relative;
@@ -12,7 +14,7 @@
 #canvas {
     position: relative;
     /*border: 2px solid #000;*/
-    background-image: url("../img/t-shirt.jpg");
+    /*background-image: url("../img/t-shirt.jpg");*/
     background-size: 100%;
     background-repeat: no-repeat;
     width: 100%;
@@ -33,5 +35,17 @@ button {
     position:absolute;
     z-index: 10;
     width: 100%;
+}
 
+#title {
+    margin: 0;
+    font-family: 'Cookie', cursive;
+    font-size: 1.5em;
+    text-shadow: 3px 3px #333;
+    color: #FFF;
+    padding: 0.75em;    
+    display: flex;
+    position:absolute;
+    z-index: 10;
+    width: 100%;
 }

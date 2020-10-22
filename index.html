@@ -7,7 +7,7 @@
   <title>Draw your design</title>
   <meta name="description" content="Draw your design">
   <meta name="author" content="HL">
-
+  <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 
 </head>
@@ -15,7 +15,7 @@
 <body>
     
     <div id="container">
-      
+      <div id="title"><h1>Embroid.io</h1></div>
       <div id="buttonbar">
         <button onclick="setColor('#000000')" style="background-color: #000000"></button>
         <button onclick="setColor('#f9a834')" style="background-color: #f9a834"></button>
@@ -25,9 +25,15 @@
         <button onclick="setColor('#007043')" style="background-color: #007043"></button>
         <button onclick="setColor('#84CF6B')" style="background-color: #84CF6B"></button>
         <button onclick="setColor('#40BAA4')" style="background-color: #40BAA4"></button>
+        <button onclick="clearCanvas()" style="background-color: #FFF"></button>
       </div>
       <canvas id="canvas"></canvas>
     </div>
+
+    <div style="display:none">
+      <img id="tshirt" src="img/t-shirt.jpg" alt="tshirt">
+    </div>
+
   <script src="js/canvas.js"></script>
 </body>
 </html>
