@@ -14,17 +14,20 @@
 
 <body>
     
-    <canvas id="canvas"></canvas>
-    <button onclick="setColor('#000')" style="background-color: #000"></button>
-    <button onclick="setColor('#f9a834')" style="background-color: #f9a834"></button>
-    <button onclick="setColor('#c86218')" style="background-color: #c86218"></button>
-    <button onclick="setColor('#ec5064')" style="background-color: #ec5064"></button>
-    <button onclick="setColor('#03919B')" style="background-color: #03919B"></button>
-    <button onclick="setColor('#007043')" style="background-color: #007043"></button>
-    <button onclick="setColor('#84CF6B')" style="background-color: #84CF6B"></button>
-    <button onclick="setColor('#40BAA4')" style="background-color: #40BAA4"></button>
-
-    
+    <div id="container">
+      
+      <div id="buttonbar">
+        <button onclick="setColor('#000000')" style="background-color: #000000"></button>
+        <button onclick="setColor('#f9a834')" style="background-color: #f9a834"></button>
+        <button onclick="setColor('#c86218')" style="background-color: #c86218"></button>
+        <button onclick="setColor('#ec5064')" style="background-color: #ec5064"></button>
+        <button onclick="setColor('#03919B')" style="background-color: #03919B"></button>
+        <button onclick="setColor('#007043')" style="background-color: #007043"></button>
+        <button onclick="setColor('#84CF6B')" style="background-color: #84CF6B"></button>
+        <button onclick="setColor('#40BAA4')" style="background-color: #40BAA4"></button>
+      </div>
+      <canvas id="canvas"></canvas>
+    </div>
   <script src="js/canvas.js"></script>
 </body>
 </html>

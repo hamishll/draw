@@ -5,18 +5,33 @@
 }
 
 
+#container {
+    position:relative;
+}
 
 #canvas {
+    position: relative;
     /*border: 2px solid #000;*/
     background-image: url("../img/t-shirt.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     width: 100%;
+    z-index: 1;
 }
 button {
-    position: relative;
-    height: 30px;
-    width: 30px;
+    margin: 1em;
+    height: 4em;
+    width: 4em;
     border-radius: 99px;
-    border: 1px solid #CCC;
+    border: 5px solid #FFF;
+    box-shadow: 5px 5px #888888;
+}
+
+#buttonbar {
+    display: flex;
+    justify-content: center;
+    position:absolute;
+    z-index: 10;
+    width: 100%;
+
 }

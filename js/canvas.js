@@ -93,7 +93,16 @@ window.addEventListener("load", () => {
 		if (e.target == canvas) {
 			e.preventDefault();
 		}
-	}, false);
+    }, false);
+    
+    // Get the position of a touch relative to the canvas
+	function getTouchPos(canvasDom, touchEvent) {
+		var rect = canvasDom.getBoundingClientRect();
+		return {
+			x: touchEvent.touches[0].clientX - rect.left,
+			y: touchEvent.touches[0].clientY - rect.top
+		};
+	}
 
 });
 
