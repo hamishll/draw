@@ -25,10 +25,12 @@ body {
     width: 100%;
     z-index: 1;
 }
-button {
+.paintcan {
     margin: 1em;
-    height: 4em;
-    width: 4em;
+    height: 6em;
+    max-height: 75px;
+    width: 6em;
+    max-width: 75px;
     border-radius: 99px;
     border: 5px solid #FFF;
     box-shadow: 5px 5px #888888;
@@ -38,6 +40,7 @@ button {
     display: flex;
     justify-content: center;
     position:absolute;
+    bottom: 20px;
     z-index: 10;
     width: 100%;
 }
@@ -45,12 +48,42 @@ button {
 #title {
     margin: 0;
     font-family: 'Cookie', cursive;
-    font-size: 1.5em;
-    text-shadow: 3px 3px #333;
-    color: #FFF;
-    padding: 0.75em;    
+    font-size: 2em;
+    text-shadow: 1.5px 1.5px #CCC;
+    color: #2167ff;
+    padding: 0.33em 0.75em;
+    padding-left: 13%;    
     display: flex;
     position:absolute;
     z-index: 10;
     width: 100%;
+    transition: 0.2s;
 }
+#title:hover {
+    text-shadow: 1.5px 1.5px #40BAA4;
+}
+
+.order {
+    position: absolute;
+    padding: 0.25em 0.5em;
+    font-family: 'Cookie', cursive;
+    color: #FFF;
+    font-size: 2em; 
+    bottom: 30px;
+    right: 50px;
+    background-color: #2167ff;
+    z-index: 10;
+    border-radius: 30px;
+    border: 0px solid black;
+    box-shadow: 5px 5px #CCC;
+    transition: 0.2s;
+}
+.order:hover {
+    box-shadow: 5px 5px #40BAA4;
+}
+
+@media only screen and (max-width: 767px) { 
+    html {
+        color: #F00;
+    }
+ }
