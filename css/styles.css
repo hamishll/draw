@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+#canvas {
+    /*border: 2px solid #000;*/
+    background-image: url("../img/t-shirt.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+button {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    border-radius: 99px;
+    border: 1px solid #CCC;
+}
