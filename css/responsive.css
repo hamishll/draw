@@ -7,8 +7,9 @@
   }
   
   @media (max-width:640px) {
-    html {
-        color: #F00;
+
+    #title {
+        font-size: 1em;
     }
   }
   

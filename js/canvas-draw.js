@@ -3,9 +3,9 @@ window.addEventListener("load", () => {
     const ctx = canvas.getContext("2d");
 
     //Resizing
-    canvas.height = window.innerHeight-20;
+    canvas.height = Math.min(999,window.innerHeight);
     canvas.width = window.innerWidth;
-
+    ctx.lineWidth = Math.round(window.innerWidth/500);
     // Example: rectangle
     //ctx.fillStyle = 'purple';
     //ctx.fillRect(50,50,200,200);
@@ -40,7 +40,7 @@ window.addEventListener("load", () => {
     }
     function draw(e) {
         if(!painting) return;
-        ctx.lineWidth = 5;
+        
         ctx.lineCap = 'round';
 
         // won't work until I draw arcs instead of points ctx.setLineDash([5, 15]);
