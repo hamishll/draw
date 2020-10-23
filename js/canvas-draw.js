@@ -24,7 +24,7 @@ window.addEventListener("load", () => {
     //let p = new Path2D('M10 10 h 80 v 80 h -80 Z');
     //ctx.fill(p);
     var img = document.getElementById("tshirt");
-    ctx.drawImage(img, 0,0,window.innerWidth,innerWidth);
+    ctx.drawImage(img, 0,0,window.innerWidth,innerWidth*0.8);
 
     // Variables
     let painting = false;
