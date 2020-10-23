@@ -5,11 +5,7 @@ window.addEventListener("load", () => {
     //Resizing
     canvas.height = window.innerHeight-20;
     canvas.width = window.innerWidth;
-    cHeight = window.innerHeight-20;
-    cWidth = window.innerWidth;
 
-    rx = 15;
-    ctx.lineWidth = Math.round(rx*0.8);
     // Example: rectangle
     //ctx.fillStyle = 'purple';
     //ctx.fillRect(50,50,200,200);
@@ -27,23 +23,8 @@ window.addEventListener("load", () => {
 
     //let p = new Path2D('M10 10 h 80 v 80 h -80 Z');
     //ctx.fill(p);
-
-    //Drawing background image
     var img = document.getElementById("tshirt");
-    ctx.drawImage(img, 0,0,window.innerWidth,window.innerWidth);
-
-    //Drawing dot grid
-    ctx.fillStyle = "rgba(0, 0, 0, 0.4) ";
-    i = 0;
-    j = 0;
-    for(; i < cWidth/rx; i++) {
-        for(; j <cHeight/rx; j++) {
-            ctx.fillRect(i*rx,j*rx,1,1);
-            console.log("d");
-        };
-        j=0;
-    };
-
+    ctx.drawImage(img, 0,0,window.innerWidth,innerWidth);
 
     // Variables
     let painting = false;
@@ -51,42 +32,32 @@ window.addEventListener("load", () => {
 
     function startPosition (e){
         painting = true;
-        startX = e.clientX;
-        startY = e.clientY;
-        //draw(e);
+        draw(e);
     }
-    function finishedPosition (e){
+    function finishedPosition (){
         painting = false;
-        
-        ctx.lineCap = 'round';
-        ctx.strokeStyle = chosenColor;
-        
-        
         ctx.beginPath();
-        ctx.moveTo(Math.round(startX/rx)*rx+0.5,Math.round(startY/rx)*rx+0.5);
-        ctx.lineTo(Math.round(e.clientX/rx)*rx+0.5,Math.round(e.clientY/rx)*rx+0.5);
-        ctx.stroke();
     }
     function draw(e) {
         if(!painting) return;
-        ctx.lineWidth = 7;
+        ctx.lineWidth = 7   ;
         ctx.lineCap = 'round';
 
         // won't work until I draw arcs instead of points ctx.setLineDash([5, 15]);
         
-        ctx.lineTo(e.clientX+0.5, e.clientY+0.5);
+        ctx.lineTo(Math.round(e.clientX/10)*10+0.5, Math.round(e.clientY/10)*10+0.5);
         ctx.strokeStyle = chosenColor;
         
         ctx.stroke();
         ctx.beginPath();
-        ctx.moveTo(e.clientX+0.5, e.clientY+0.5);
+        ctx.moveTo(Math.round(e.clientX/10)*10+0.5, Math.round(e.clientY/10)*10+0.5);
     }
 
 
     // Event Listeners
     canvas.addEventListener("mousedown", startPosition);
     canvas.addEventListener("mouseup", finishedPosition);
-    //canvas.addEventListener("mousemove", draw);
+    canvas.addEventListener("mousemove", draw);
     
     
     // Set up touch events for mobile, etc

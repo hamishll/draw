@@ -8,8 +8,8 @@ window.addEventListener("load", () => {
     cHeight = window.innerHeight-20;
     cWidth = window.innerWidth;
 
-    rx = 15;
-    ctx.lineWidth = Math.round(rx*0.8);
+    rx = 7;
+    ctx.lineWidth = 5;
     // Example: rectangle
     //ctx.fillStyle = 'purple';
     //ctx.fillRect(50,50,200,200);
@@ -33,7 +33,7 @@ window.addEventListener("load", () => {
     ctx.drawImage(img, 0,0,window.innerWidth,window.innerWidth);
 
     //Drawing dot grid
-    ctx.fillStyle = "rgba(0, 0, 0, 0.4) ";
+    ctx.fillStyle = "rgba(0, 0, 0, 0.2) ";
     i = 0;
     j = 0;
     for(; i < cWidth/rx; i++) {

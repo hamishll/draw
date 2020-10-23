@@ -17,6 +17,7 @@ body {
 
 #container {
     position:relative;
+    height: 100%;
 }
 
 #canvas {
@@ -29,7 +30,7 @@ body {
     z-index: 1;
 }
 .paintcan {
-    margin: 1em;
+    margin: 0em 1em;
     height: 6em;
     max-height: 75px;
     width: 6em;
@@ -37,6 +38,10 @@ body {
     border-radius: 99px;
     border: 5px solid #FFF;
     box-shadow: 5px 5px #888888;
+    transition: 0s;
+}
+.paintcan:hover {
+    box-shadow: 5px 5px #333;
 }
 
 #buttonbar {
@@ -44,7 +49,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     position:absolute;
-    bottom: 20px;
+    bottom: 10px;
     z-index: 10;
     width: 100%;
 }
@@ -61,7 +66,7 @@ body {
     position:absolute;
     z-index: 10;
     width: 100%;
-    transition: 0.2s;
+    transition: 0s;
 }
 #title:hover {
     text-shadow: 1.5px 1.5px #40BAA4;
@@ -80,7 +85,7 @@ body {
     border-radius: 30px;
     border: 0px solid black;
     box-shadow: 5px 5px #CCC;
-    transition: 0.2s;
+    transition: 0s;
 }
 .order:hover {
     box-shadow: 5px 5px #40BAA4;
