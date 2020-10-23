@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
     //Resizing
     canvas.height = Math.min(999,window.innerHeight);
     canvas.width = window.innerWidth;
-    ctx.lineWidth = Math.round(window.innerWidth/500);
+    ctx.lineWidth = Math.round(window.innerWidth/300);
     // Example: rectangle
     //ctx.fillStyle = 'purple';
     //ctx.fillRect(50,50,200,200);
