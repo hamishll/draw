@@ -30,7 +30,7 @@ window.addEventListener("load", () => {
 
     //Drawing background image
     var img = document.getElementById("tshirt");
-    ctx.drawImage(img, 0,0,window.innerWidth,window.innerWidth);
+    ctx.drawImage(img, 0,0,window.innerWidth,window.innerHeight);
 
     //Drawing dot grid
     ctx.fillStyle = "rgba(0, 0, 0, 0.2) ";
