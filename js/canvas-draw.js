@@ -40,7 +40,7 @@ window.addEventListener("load", () => {
     }
     function draw(e) {
         if(!painting) return;
-        ctx.lineWidth = 3;
+        ctx.lineWidth = 5;
         ctx.lineCap = 'round';
 
         // won't work until I draw arcs instead of points ctx.setLineDash([5, 15]);
