@@ -14,10 +14,16 @@ var started = false;
 var lastx = 0;
 var lasty = 0;
 
+//Global setting for canvas width and height
+cWidth = 375;
+cHeight = 375;
+
+
+
 // create an in-memory canvas
 var memCanvas = document.createElement('canvas');
-memCanvas.width = 400;
-memCanvas.height = 400;
+memCanvas.width = cWidth;
+memCanvas.height = cHeight;
 var memCtx = memCanvas.getContext('2d');
 var points = [];
 
@@ -46,7 +52,7 @@ function mouseMove(e) {
     // if a minimum value of time + distance is reached, we draw
     if ((Math.abs(n.x-m.x) + Math.abs(n.y-m.y) + (currentTime-oldTime)/1.7) > 18) {
         if (started) {
-            ctx.clearRect(0, 0, 400, 400);
+            ctx.clearRect(0, 0, cWidth, cHeight);
             // put back the saved content
             ctx.drawImage(memCanvas, 0, 0);
             n.x = m.x;
@@ -69,7 +75,7 @@ function mouseUp(e) {
         started = false;
         // When the pen is done, save the resulting context
         // to the in-memory canvas
-        memCtx.clearRect(0, 0, 400, 400);
+        memCtx.clearRect(0, 0, cWidth, cHeight);
         memCtx.drawImage(canvas, 0, 0);
         points = [];
     }
@@ -77,8 +83,8 @@ function mouseUp(e) {
 
 // clear both canvases!
 function clearCanvas() {
-    ctx.clearRect(0, 0, 400, 400);
-    memCtx.clearRect(0, 0, 400, 400);
+    ctx.clearRect(0, 0, cWidth, cHeight);
+    memCtx.clearRect(0, 0, cWidth, cHeight);
 };
 //undo!
 function undo() {
