@@ -8,6 +8,7 @@ var ctx = canvas.getContext('2d');
 ctx.lineWidth = 3;
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
+ctx.imageSmoothingQuality = 'high';
 
 var started = false;
 var lastx = 0;
@@ -20,6 +21,7 @@ memCanvas.height = 400;
 var memCtx = memCanvas.getContext('2d');
 var points = [];
 
+// set
 currentTime = performance.now();
 oldTime = performance.now();
 
@@ -35,26 +37,19 @@ function mouseDown(e) {
 };
 
 function mouseMove(e) { 
+    // get the current time frame
     currentTime = performance.now();
-    ////console.log(currentTime);
-    ////console.log(oldTime);
-    //if (currentTime-oldTime > 5) {
     //console.log(currentTime-oldTime);
     
     var m = getMouse(e, canvas);
-    //console.log("nx=",n.x);
-    //console.log("mx=",m.x);
-    //console.log(Math.abs(n.x*n.y - m.x*m.y));
 
-    if (Math.abs(n.x-m.x) + Math.abs(n.y-m.y) + (currentTime-oldTime)/10 > 10) {
-        //console.log(n.x*n.y - m.x*m.y);
+    // if a minimum value of time + distance is reached, we draw
+    if ((Math.abs(n.x-m.x) + Math.abs(n.y-m.y) + (currentTime-oldTime)/1.7) > 18) {
         if (started) {
             ctx.clearRect(0, 0, 400, 400);
             // put back the saved content
             ctx.drawImage(memCanvas, 0, 0);
             n.x = m.x;
-            //console.log("nx=",n.x);
-            //console.log("mx=",m.x);
             n.y = m.y;
             points.push({
                 x: m.x,
@@ -64,7 +59,7 @@ function mouseMove(e) {
         } 
     }
     
-    
+    //store the previous time frame
     oldTime = currentTime;
         
     };
@@ -134,7 +129,7 @@ function getMouse(e, canvas) {
   // We return a simple javascript object with x and y defined
   return {x: mx, y: my};
 }
-//var n = x=0, y=0;
+
 
 var n = {
     x: 0,
