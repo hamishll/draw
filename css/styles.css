@@ -24,7 +24,6 @@ body {
     /*background-image: url("../img/t-shirt.jpg");*/
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 100%;
     z-index: 1;
 }
 .paintcan {
