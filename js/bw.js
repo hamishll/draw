@@ -102,7 +102,7 @@ img.onload = function() {
     canvas.height = h;     
     canvas.width = w;  
     ctx.imageSmoothingEnabled = true;     
-    ctx.drawImage(img, 0+0.5, 0+0.5, w, h);
+    ctx.drawImage(img, 0-0.5, 0-0.5, w, h);
     //toGrayscale(ctx, w, h);
     var histogram = hist(ctx, w, h);
     var threshold = otsu(histogram, w*h);
