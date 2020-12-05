@@ -17,12 +17,15 @@ body {
 
 #header {
     width: 100%;
-    height: 30px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
     /* border: 1px solid blue; */
 }
 input {
     position: absolute;
     z-index: 20;
+    font-size: 2em;
 }
 
 #preview {
