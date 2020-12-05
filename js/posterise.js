@@ -2,7 +2,7 @@ var canvas = document.querySelector('canvas');
 var input = document.querySelector('input');
 var svg = document.querySelector('svg');
 var imgPreview;
-var POSTERIZE_LEVELS = 0;
+var POSTERIZE_LEVELS = 2;
 var WIDTH = 256;
 
 input.addEventListener('change', loadImage);
