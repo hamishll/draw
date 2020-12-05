@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: auto;
+    width: auto;
+}
+
+#container {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#header {
+    width: 100%;
+    height: 30px;
+    /* border: 1px solid blue; */
+}
+input {
+    position: absolute;
+    z-index: 20;
+}
+
+#preview {
+    background-image: url(../img/t-shirtgirl.png);
+    background-repeat: no-repeat;
+    /* border: 1px solid purple; */
+    width: 1000px;
+    height: 600px;
+    position: relative;
+}
+
+.texture {
+    opacity: 0.2;
+    width: 250px;
+    height: 400px;
+    position: absolute;
+    z-index: 2;
+    top: 350px;
+    left: 600px;
+    background-image: url(../img/line2.png);
+    background-repeat: repeat;
+}
+
+#viewport {
+    position: absolute;
+    z-index: 1;  
+    top: 350px;
+    left: 600px;
+}
