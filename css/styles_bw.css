@@ -67,10 +67,20 @@ input {
     width: 50%;
     left: 50%;
 }
-#sliderbar {
+.card {
     height: auto;
-    width: 400px;
-    margin: 16px;
+    margin:16px;
+}
+.card.c1 {
+    width: 100%;
+    max-width: 1000px;
+}
+.card.c2 {
+    width: 50%;
+    max-width: 400px;
+}
+.slider {
+    width: 50%;
 }
 #swatch {
     width: 120px;
