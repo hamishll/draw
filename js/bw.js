@@ -2,10 +2,14 @@ var RED_INTENCITY_COEF = 0.2126;
 var GREEN_INTENCITY_COEF = 0.7152;
 var BLUE_INTENCITY_COEF = 0.0722;
 
+var varRed = 255;
+var varGreen = 152;
+var varBlue = 198;
+
 //var canvas = document.createElement('CANVAS');
 var canvas = document.getElementById('viewport');
 var ctx = canvas.getContext('2d');
-var canvasWidth = 250;
+var canvasWidth = 200;
 
 var img = new Image;
 
@@ -85,9 +89,9 @@ function binarize(threshold, context, w, h) {
     for(var i = 0; i < data.length; i += 4) {
         var brightness = RED_INTENCITY_COEF * data[i] + GREEN_INTENCITY_COEF * data[i + 1] + BLUE_INTENCITY_COEF * data[i + 2];
         val = ((brightness > threshold) ? 255 : 0);
-        data[i] = val;
-        data[i + 1] = val;
-        data[i + 2] = val;
+        data[i] = varRed;
+        data[i + 1] = varGreen;
+        data[i + 2] = varBlue;
         data[i + 3] = 255-val;
     }
     
@@ -114,4 +118,25 @@ input.addEventListener('change', handleFiles);
 
 function handleFiles(e) {
     img.src = URL.createObjectURL(e.target.files[0]);
+};
+
+
+
+// APP UI
+var sliderbar = document.getElementById('sliderbar');
+// var sliderRed = document.getElementById('sliderRed');
+// var sliderGreen = document.getElementById('sliderGreen');
+// var sliderBlue = document.getElementById('sliderBlue');
+
+sliderbar.addEventListener('mousemove', setColor, false);
+// sliderRed.addEventListener('mouseup', setColor, false);
+// sliderGreen.addEventListener('mouseup', setColor, false);
+// sliderBlue.addEventListener('mouseup', setColor, false);
+
+function setColor () {
+    varRed = document.getElementById('sliderRed').value;
+    varGreen = document.getElementById('sliderGreen').value;
+    varBlue = document.getElementById('sliderBlue').value;
+    console.log("Color: R:" + varRed + " G:" + varGreen + " B:" + varBlue);
+    document.getElementById('swatch').style.backgroundColor = "rgb("+varRed+", "+varGreen+", "+varBlue+")";
 };
