@@ -126,6 +126,7 @@ h2 {
 }
 #uploadbar {
     height: auto;
-    width: 400px;
+    width: 100%;
+    max-width: 540px;
     margin: 16px;
 }
