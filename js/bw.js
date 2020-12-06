@@ -124,14 +124,8 @@ function handleFiles(e) {
 
 // APP UI
 var sliderbar = document.getElementById('sliderbar');
-// var sliderRed = document.getElementById('sliderRed');
-// var sliderGreen = document.getElementById('sliderGreen');
-// var sliderBlue = document.getElementById('sliderBlue');
-
 sliderbar.addEventListener('mousemove', setColor, false);
-// sliderRed.addEventListener('mouseup', setColor, false);
-// sliderGreen.addEventListener('mouseup', setColor, false);
-// sliderBlue.addEventListener('mouseup', setColor, false);
+sliderbar.addEventListener('touchmove', setColor, false);
 
 function setColor () {
     varRed = document.getElementById('sliderRed').value;
