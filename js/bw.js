@@ -126,6 +126,7 @@ function handleFiles(e) {
 var sliderbar = document.getElementById('sliderbar');
 sliderbar.addEventListener('mousemove', setColor, false);
 sliderbar.addEventListener('touchmove', setColor, false);
+sliderbar.addEventListener('touchend', setColor, false);
 
 function setColor () {
     varRed = document.getElementById('sliderRed').value;
