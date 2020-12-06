@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet"> 
+<meta name="viewport" content="width=device-width">
 
 
 </head>
@@ -38,14 +39,14 @@
       R<input type="range" min="0" max="255" value="255" class="slider" id="sliderRed"><br /><br />
       G<input type="range" min="0" max="255" value="152" class="slider" id="sliderGreen"><br /><br />
       B<input type="range" min="0" max="255" value="198" class="slider" id="sliderBlue">
+      <div id="swatch"></div>
     </div>
 
-    <div id="swatch"></div>
+    
 
     <div id="uploadmenu">
-      <label for="input" class="custom-file-upload">
-        2. Choose your art
-      </label>
+      <h2>2. Choose your art</h2>
+      <label for="input" class="custom-file-upload">Select</label>
       <input id="input" type="file"/>
     </div>
 

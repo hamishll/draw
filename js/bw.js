@@ -105,7 +105,8 @@ img.onload = function() {
     /*var w = img.width, h = img.height;*/
     canvas.height = h;     
     canvas.width = w;  
-    ctx.imageSmoothingEnabled = true;     
+    ctx.imageSmoothingEnabled = true;    
+    ctx.filter = 'blur(1.2px)'; 
     ctx.drawImage(img, 0-0.5, 0-0.5, w, h);
     //toGrayscale(ctx, w, h);
     var histogram = hist(ctx, w, h);
